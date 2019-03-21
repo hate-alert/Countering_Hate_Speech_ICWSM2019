@@ -1,4 +1,5 @@
 [![HitCount](http://hits.dwyl.io/binny-mathew/Countering_Hate_Speech.svg)](http://hits.dwyl.io/binny-mathew/Countering_Hate_Speech)
+
 # Thou shalt not hate: Countering Online Hate Speech
 
 Binny Mathew, Punyajoy Saha, Hardik Tharad, Subham Rajgaria, Prajwal Singhania, Suman Kalyan Maity, Pawan Goyal, and Animesh Mukherjee. 2019. "[Thou shalt not hate: Countering Online Hate Speech](https://arxiv.org/abs/1808.04409)". ICWSM
@@ -82,3 +83,12 @@ replies               -->  The list of replies received by the comment.
 timestamp             -->  The timestamp of the comment
 user --> The account name of the user who posted the comment.
 ~~~
+
+
+
+
+------------------------------------------
+***Demo***
+------------------------------------------
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/binny-mathew/Countering_Hate_Speech/blob/master/RESULTS.ipynb)
