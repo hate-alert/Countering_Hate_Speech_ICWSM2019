@@ -91,4 +91,4 @@ user --> The account name of the user who posted the comment.
 ***Demo***
 ------------------------------------------
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/binny-mathew/Countering_Hate_Speech/blob/master/RESULTS.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/binny-mathew/Countering_Hate_Speech/blob/master/RESULTS.ipynb)
