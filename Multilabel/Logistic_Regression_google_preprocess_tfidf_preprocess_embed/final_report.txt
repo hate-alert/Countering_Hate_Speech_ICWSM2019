@@ -1,0 +1,1 @@
+Logistic_RegressionThe hard train score is :- 0.349488650130921The hard metric score is :- 0.2269857823331555The accuracy is :- 0.47540864262811394The precision is :- 0.5098172525863874The recall is :- 0.7267144513123512The f1_score is :- 0.5992029770440688The hamming loss is :-0.14725930136600857

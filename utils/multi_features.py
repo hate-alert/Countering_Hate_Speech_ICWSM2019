@@ -9,16 +9,16 @@ from nltk.stem.porter import *
 ps = PorterStemmer()
 from scipy.sparse import vstack, hstack
 
-
 def get_data(pd_train):
     comments=pd_train['text'].values
-    labels=pd_train['class'].values
+    df = pd_train.drop('text', 1)
+    labels=df.values
     list_comment=[]
     for comment,label in zip(comments,labels):
         temp={}
         temp['text']=comment
         temp['label']=label
-        list_comment. append(temp)
+        list_comment.append(temp)
     return list_comment    
 
 TOKENIZER = glove_tokenize

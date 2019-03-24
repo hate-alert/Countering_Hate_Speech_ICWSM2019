@@ -159,7 +159,7 @@ def calculate_score(y_true, y_pred, normalize=True, sample_weight=None):
         f1_score.append(temp_f1)
         
         
-    mean_hamming=sklearn.metrics.hamming_loss(y_true, y_pred)
+    mean_hamming=hamming_loss(y_true, y_pred)
     mean_accuracy=np.mean(accuracy)
     mean_precision=np.mean(precision)
     mean_recall=np.mean(recall)
