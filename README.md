@@ -91,4 +91,4 @@ user --> The account name of the user who posted the comment.
 ***Demo***
 ------------------------------------------
 
-[![Open In Colab](https://colab.research.google.com/drive/1XMVa5xcSNP3fCbcDiSnU8LQVe6Ar2rY4#scrollTo=sLM_PY2WBtcC)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XMVa5xcSNP3fCbcDiSnU8LQVe6Ar2rY4#scrollTo=sLM_PY2WBtcC)
