@@ -23,8 +23,14 @@ Binny Mathew, Punyajoy Saha, Hardik Tharad, Subham Rajgaria, Prajwal Singhania, 
 ***Folder Description***
 ------------------------------------------
 ~~~
-/Counter_NonCounter --> contains the classifiers performing binary classifier on the total dataset
-/Multilabel    --> Contains the classifiers performing the multilabel classification of counter speech 
+
+./Dataset             --> Contains the dataset
+./Counter_NonCounter  --> Contains the classifiers performing binary classifier on the total dataset
+./Multilabel          --> Contains the classifiers performing the multilabel classification of counter speech 
+./Best_model          --> Contains the best models we found for each of the three tasks
+./Full_Results        --> Contains the classification results for all classifiers and other dataset related information
+./Utils               --> Miscellaneous functions used for the task.
+
 ~~~
 ------------------------------------------
 ***File Description***
