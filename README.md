@@ -83,7 +83,7 @@ likes                 -->  The number of likes received by the comment.
 numberOfReplies       -->  The number of replies received by the comment.
 replies               -->  The list of replies received by the comment.
 timestamp             -->  The timestamp of the comment
-user --> The account name of the user who posted the comment.
+user                  -->  The account name of the user who posted the comment.
 ~~~
 
 
