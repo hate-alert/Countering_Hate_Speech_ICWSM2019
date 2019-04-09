@@ -8,6 +8,8 @@ from gensim.parsing.preprocessing import STOPWORDS
 from nltk.stem.porter import *
 ps = PorterStemmer()
 from scipy.sparse import vstack, hstack
+from os import path
+import pickle 
 
 
 def get_data(pd_train):
@@ -53,31 +55,50 @@ def gen_data_new_tfidf(pd_train):
     for comment in comments:
         y.append(comment['label'])
         X.append(comment['text'])
-
-
-    #Word Level Features
-    word_vectorizer = TfidfVectorizer(sublinear_tf=False, ngram_range=(1,3),
-                min_df=1, 
-                strip_accents='unicode',
-                #smooth_idf=1,
-                analyzer='word', 
-                stop_words='english',
-                tokenizer=TOKENIZER,             
-                max_features=500)
     
+    if(path.exists("../../utils/tfidf_word_vectorizer.pk")):
+            with open('../../utils/tfidf_word_vectorizer.pk', 'rb') as fin:
+                word_vectorizer = pickle.load(fin)
+    else:
+            #Word Level Features
+            word_vectorizer = TfidfVectorizer(sublinear_tf=False, ngram_range=(1,3),
+                        min_df=1, 
+                        strip_accents='unicode',
+                        #smooth_idf=1,
+                        analyzer='word', 
+                        stop_words='english',
+                        tokenizer=TOKENIZER,             
+                        max_features=500)
+            word_vectorizer.fit(X)
+            with open('../../utils/tfidf_word_vectorizer.pk', 'wb') as fin:
+                    pickle.dump(word_vectorizer, fin)
+    
+    
+    
+    if(path.exists("../../utils/tfidf_char_vectorizer.pk")):
+            with open('../../utils/tfidf_char_vectorizer.pk', 'rb') as fin:
+                char_vectorizer = pickle.load(fin)
+    else:
+            #Word Level Features
+            char_vectorizer = TfidfVectorizer(
+                            sublinear_tf=False,
+                            strip_accents='unicode',
+                            analyzer='char',
+                            #stop_words='english',
+                            ngram_range=(2, 6),
+                            max_features=500)
+            char_vectorizer.fit(X)
+            with open('../../utils/tfidf_char_vectorizer.pk', 'wb') as fin:
+                    pickle.dump(char_vectorizer, fin)
+    
+            
+      
     
     #charlevel features new
-    char_vectorizer = TfidfVectorizer(
-    sublinear_tf=False,
-    strip_accents='unicode',
-    analyzer='char',
-    #stop_words='english',
-    ngram_range=(2, 6),
-    max_features=500)
-    word_vectorizer.fit(X)
-    char_vectorizer.fit(X)
     test_word_features = word_vectorizer.transform(X)
     test_char_features = char_vectorizer.transform(X)
+    
+        
     X = list(hstack([test_char_features, test_word_features]).toarray())
     return X, y
 
@@ -88,35 +109,55 @@ def gen_data_new_tfidf2(pd_train):
     for comment in comments:
         y.append(comment['label'])
         X.append(comment['text'])
-
-
-    #Word Level Features
-    word_vectorizer = TfidfVectorizer(sublinear_tf=False,ngram_range=(1,3),
-                min_df=1, 
-                strip_accents='unicode',
-                #smooth_idf=1,
-                analyzer='word', 
-                #stop_words='english',
-                tokenizer=glove_tokenize_norem,             
-                max_features=500)
     
+    if(path.exists("../../utils/tfidf_word_vectorizer.pk")):
+            with open('../../utils/tfidf_word_vectorizer.pk', 'rb') as fin:
+                word_vectorizer = pickle.load(fin)
+    else:
+            #Word Level Features
+            word_vectorizer = TfidfVectorizer(sublinear_tf=False, ngram_range=(1,3),
+                        min_df=1, 
+                        strip_accents='unicode',
+                        #smooth_idf=1,
+                        analyzer='word', 
+                        stop_words='english',
+                        tokenizer=glove_tokenize_norem,             
+                        max_features=500)
+            word_vectorizer.fit(X)
+            with open('../../utils/tfidf_word_vectorizer.pk', 'wb') as fin:
+                    pickle.dump(word_vectorizer, fin)
+    
+    
+    
+    if(path.exists("../../utils/tfidf_char_vectorizer.pk")):
+            with open('../../utils/tfidf_char_vectorizer.pk', 'rb') as fin:
+                char_vectorizer = pickle.load(fin)
+    else:
+            #Word Level Features
+            char_vectorizer = TfidfVectorizer(
+                            sublinear_tf=False,
+                            strip_accents='unicode',
+                            analyzer='char',
+                            #stop_words='english',
+                            ngram_range=(2, 6),
+                            max_features=500)
+            char_vectorizer.fit(X)
+            with open('../../utils/tfidf_char_vectorizer.pk', 'wb') as fin:
+                    pickle.dump(char_vectorizer, fin)
+    
+            
+      
     
     #charlevel features new
-    char_vectorizer = TfidfVectorizer(
-    sublinear_tf=False,
-    strip_accents='unicode',
-    analyzer='char',
-    #stop_words='english',
-    ngram_range=(2, 6),
-    max_features=500)
-    
-    word_vectorizer.fit(X)
-    char_vectorizer.fit(X)
     test_word_features = word_vectorizer.transform(X)
     test_char_features = char_vectorizer.transform(X)
-    X = list(hstack([test_char_features, test_word_features]).toarray())
     
+        
+    X = list(hstack([test_char_features, test_word_features]).toarray())
     return X, y
+
+
+
 
 def gen_data_embed(pd_train,word2vec_model):
     comments = get_data(pd_train)
