@@ -34,6 +34,11 @@ Binny Mathew, Punyajoy Saha, Hardik Tharad, Subham Rajgaria, Prajwal Singhania, 
 ~~~
 
 
+## Requirements 
+
+Make sure to use **Python3** when running the scripts. The package requirements can be obtained by running `pip install -r requirements.txt`.
+
+
 ------------------------------------------
 ***Demo Available***
 ------------------------------------------
