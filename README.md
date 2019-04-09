@@ -32,12 +32,6 @@ Binny Mathew, Punyajoy Saha, Hardik Tharad, Subham Rajgaria, Prajwal Singhania, 
 ./Utils               --> Miscellaneous functions used for the task.
 
 ~~~
-------------------------------------------
-***File Description***
-------------------------------------------
-~~~
-./Counterspeech Video Statistics.csv  --> Contains details such as video title, URL, Number of likes etc. for the videos selected for Annotation.
-~~~
 
 
 ------------------------------------------
