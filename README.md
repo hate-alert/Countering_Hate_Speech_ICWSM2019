@@ -35,7 +35,7 @@ Binny Mathew, Punyajoy Saha, Hardik Tharad, Subham Rajgaria, Prajwal Singhania, 
 
 
 ------------------------------------------
-***Demo***
+***Demo Available***
 ------------------------------------------
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/binny-mathew/Countering_Hate_Speech/blob/master/DEMO_Counter_speech.ipynb)
