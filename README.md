@@ -49,7 +49,7 @@ Make sure to use **Python3** when running the scripts. The package requirements 
 ***Instructions for using the models***
 ------------------------------------------
 
-1. Binary classifier model  
+1. **Binary classifier model**  
     1. Load the data into the python script or the jupyter notebook. If the data is in .json format convert the data into .csv. After converting into .csv format check the column names and column values in few rows if that matches with the **dataset** available here.
     2. Load the binary classification model using joblib as shown in **DEMO_Counter_speech.ipynb** 
     3. Load the word embeddings model by using the function **loadGloveModel2** and changing the path to where your word embeddings are present. Here the [glove](https://nlp.stanford.edu/projects/glove/)  embeddings trained on 840 billion sentences and having dimension as 300 is used.  
@@ -60,3 +60,17 @@ Make sure to use **Python3** when running the scripts. The package requirements 
        4. commen_preprocess - here preprocessing methods for text are used 
     5. from features module import **combine_tf_rem_google_rem_embed** and use it to generate the feature matrix **X** and decision vector **y** as in **DEMO_Counter_speech.ipynb**.
     6. run the model on the feature matrix using the **predict** function and evaluate the predicted vector using the functions in the **helper** submodule.
+
+2. **Multilabel classifier model**  
+    1. Load the data into the python script or the jupyter notebook. If the data is in .json format convert the data into .csv. After converting into .csv format check the column names and column values in few rows if that matches with the **dataset** available here.
+    2. Load the multilabel classification model using joblib as shown in **DEMO_Counter_speech.ipynb** 
+    3. Load the word embeddings model by using the function **loadGloveModel2** and changing the path to where your word embeddings are present. Here the [glove](https://nlp.stanford.edu/projects/glove/)  embeddings trained on 840 billion sentences and having dimension as 300 is used.  
+    4. Import following sub-modules from utils module
+       1. multi_features - here function to extract the multilabel features and their combination are present
+       2. tokenize - here different tokenization are used 
+       3. helper - here results saving functions are used
+       4. commen_preprocess - here preprocessing methods for text are used 
+    5. Remove all the rows having **Default** category as they are not having counter speech. Rest rows should have one or more labels seperated by comma(,). 
+    6. Each multilabel value is converted to a horizontal vector whose each element represent whether that numbered label is present or not. for example a multilabel (2,3,9) will be converted to a vector [0,1,1,0,0,0,0,0,1,0]. This has to be done for each row in the data. It is already present in **DEMO_Counter_speech.ipynb**.
+    7. from multi_features module import **combine_tf_rem_google_rem_embed** and use it to generate the feature matrix **X** and decision matrix **y** as in **DEMO_Counter_speech.ipynb**.
+    8. run the model on the feature matrix using the **predict** function and evaluate the predicted vector using the functions in the **helper** submodule.
