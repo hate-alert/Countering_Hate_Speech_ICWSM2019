@@ -1,5 +1,5 @@
 [![HitCount](http://hits.dwyl.io/binny-mathew/Countering_Hate_Speech.svg)](http://hits.dwyl.io/binny-mathew/Countering_Hate_Speech)
-
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/thou-shalt-not-hate-countering-online-hate-1/counterspeech-detection-on-youtube)](https://paperswithcode.com/sota/counterspeech-detection-on-youtube?p=thou-shalt-not-hate-countering-online-hate-1)
 # Thou shalt not hate: Countering Online Hate Speech
 
 Binny Mathew, Punyajoy Saha, Hardik Tharad, Subham Rajgaria, Prajwal Singhania, Suman Kalyan Maity, Pawan Goyal, and Animesh Mukherjee. 2019. "[Thou shalt not hate: Countering Online Hate Speech](https://arxiv.org/abs/1808.04409)". ICWSM
