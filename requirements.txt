@@ -2,7 +2,7 @@ pandas==0.20.3
 nltk==3.2.4
 matplotlib==2.1.0
 numpy==1.14.5
-tensorflow==1.8.0
+tensorflow==1.15.4
 gensim==3.4.0
 scipy==0.19.1
 scikit_learn==0.20.3
