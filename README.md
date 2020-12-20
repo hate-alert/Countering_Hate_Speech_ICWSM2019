@@ -8,7 +8,7 @@ Binny Mathew, Punyajoy Saha, Hardik Tharad, Subham Rajgaria, Prajwal Singhania, 
 
 > Mathew, B., Saha, P., Tharad, H., Rajgaria, S., Singhania, P., Maity, S. K., Goyal, P., & Mukherje, A. (2019). Thou shalt not hate: Countering online hate speech. In _Thirteenth International AAAI Conference on Web and Social Media (ICWSM)_.
 
-~~~
+~~~bibtex
 @inproceedings{mathew2018thou,
   title={Thou shalt not hate: Countering online hate speech},
   author={Mathew, Binny and Saha, Punyajoy and Tharad, Hardik and Rajgaria, Subham and Singhania, Prajwal and Maity, Suman Kalyan and Goyal, Pawan and Mukherje, Animesh},
