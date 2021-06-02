@@ -12,7 +12,7 @@ from os import path
 import pickle 
 import os
 
-path_new='Countering_Hate_Speech_ICWSM2019/utils/'
+path_new=''
 
 def get_data(pd_train):
     comments=pd_train['text'].values
@@ -72,7 +72,7 @@ def gen_data_new_tfidf(pd_train):
                         tokenizer=TOKENIZER,             
                         max_features=500)
             word_vectorizer.fit(X)
-            with open(path+'tfidf_word_vectorizer.pk', 'wb') as fin:
+            with open(path_new+'tfidf_word_vectorizer.pk', 'wb') as fin:
                     pickle.dump(word_vectorizer, fin)
     
     
