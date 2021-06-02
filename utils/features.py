@@ -10,7 +10,9 @@ ps = PorterStemmer()
 from scipy.sparse import vstack, hstack
 from os import path
 import pickle 
-
+import os
+retval = os.getcwd()
+print(retval)
 
 def get_data(pd_train):
     comments=pd_train['text'].values
