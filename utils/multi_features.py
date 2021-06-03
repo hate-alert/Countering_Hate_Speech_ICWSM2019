@@ -59,8 +59,8 @@ def gen_data_new_tfidf(pd_train):
         X.append(comment['text'])
 
 
-    if(path.exists("../utils/tfidf_word_vectorizer.pk")):
-            with open('../utils/tfidf_word_vectorizer.pk', 'rb') as fin:
+    if(path.exists("tfidf_word_vectorizer.pk")):
+            with open('tfidf_word_vectorizer.pk', 'rb') as fin:
                 word_vectorizer = pickle.load(fin)
     else:
             #Word Level Features
@@ -78,8 +78,8 @@ def gen_data_new_tfidf(pd_train):
     
     
     
-    if(path.exists("../utils/tfidf_char_vectorizer.pk")):
-            with open('../utils/tfidf_char_vectorizer.pk', 'rb') as fin:
+    if(path.exists("tfidf_char_vectorizer.pk")):
+            with open('tfidf_char_vectorizer.pk', 'rb') as fin:
                 char_vectorizer = pickle.load(fin)
     else:
             #Word Level Features
@@ -91,7 +91,7 @@ def gen_data_new_tfidf(pd_train):
                             ngram_range=(2, 6),
                             max_features=500)
             char_vectorizer.fit(X)
-            with open('../utils/tfidf_char_vectorizer.pk', 'wb') as fin:
+            with open('tfidf_char_vectorizer.pk', 'wb') as fin:
                     pickle.dump(char_vectorizer, fin)
     
     test_word_features = word_vectorizer.transform(X)
@@ -113,8 +113,8 @@ def gen_data_new_tfidf2(pd_train):
         X.append(comment['text'])
 
 
-    if(path.exists("../utils/tfidf_word_vectorizer.pk")):
-            with open('../utils/tfidf_word_vectorizer.pk', 'rb') as fin:
+    if(path.exists("tfidf_word_vectorizer.pk")):
+            with open('tfidf_word_vectorizer.pk', 'rb') as fin:
                 word_vectorizer = pickle.load(fin)
     else:
             #Word Level Features
@@ -127,13 +127,13 @@ def gen_data_new_tfidf2(pd_train):
                         tokenizer=glove_tokenize_norem,             
                         max_features=500)
             word_vectorizer.fit(X)
-            with open('../utils/tfidf_word_vectorizer.pk', 'wb') as fin:
+            with open('tfidf_word_vectorizer.pk', 'wb') as fin:
                     pickle.dump(word_vectorizer, fin)
     
     
     
-    if(path.exists("../utils/tfidf_char_vectorizer.pk")):
-            with open('../utils/tfidf_char_vectorizer.pk', 'rb') as fin:
+    if(path.exists("tfidf_char_vectorizer.pk")):
+            with open('tfidf_char_vectorizer.pk', 'rb') as fin:
                 char_vectorizer = pickle.load(fin)
     else:
             #Word Level Features
@@ -145,7 +145,7 @@ def gen_data_new_tfidf2(pd_train):
                             ngram_range=(2, 6),
                             max_features=500)
             char_vectorizer.fit(X)
-            with open('../utils/tfidf_char_vectorizer.pk', 'wb') as fin:
+            with open('tfidf_char_vectorizer.pk', 'wb') as fin:
                     pickle.dump(char_vectorizer, fin)
     
     test_word_features = word_vectorizer.transform(X)
