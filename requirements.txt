@@ -10,7 +10,7 @@ tensorflow_hub==0.4.0
 emoji==0.5.0
 tqdm==4.23.4
 gensim==3.4.0
-joblib==0.12.4
+joblib==1.2.0
 xgboost==0.72
 catboost==0.9.1.1
 scikit-multilearn==0.1.0
